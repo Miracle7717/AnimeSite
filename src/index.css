@@ -1,0 +1,40 @@
+* { margin:0; padding:0; box-sizing:border-box; }
+body { font-family: 'Segoe UI', sans-serif; background: #0d0d1e; color: #fff; min-height: 100vh; }
+
+.home { padding: 3rem 1rem; max-width: 1400px; margin: 0 auto; }
+.title { font-size: 5rem; text-align:center; margin-bottom: 4rem; background: linear-gradient(90deg,#ff4e50,#fc913a,#f9d62e,#6ef195); -webkit-background-clip:text; color:transparent; }
+.grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px,1fr)); gap: 2rem; }
+
+.anime-card { display:block; border-radius:20px; overflow:hidden; background:rgba(255,255,255,0.05); backdrop-filter:blur(10px); transition:.4s; }
+.anime-card:hover { transform:translateY(-20px); box-shadow:0 30px 60px rgba(134,0,255,0.4); }
+.anime-card img { width:100%; height:450px; object-fit:cover; }
+.card-body { padding:1.5rem; }
+.card-body h3 { font-size:1.4rem; margin-bottom:0.5rem; }
+.year { color:#aaa; font-size:0.9rem; }
+.rating { margin-top:1rem; font-size:2rem; color:#ffd43b; }
+
+.detail-page { padding:3rem 1rem; max-width:1200px; margin:0 auto; }
+.back { color:#ff6bff; font-size:1.3rem; text-decoration:none; display:inline-block; margin-bottom:2rem; }
+.detail { display:grid; grid-template-columns:1fr 2fr; gap:3rem; background:rgba(255,255,255,0.05); border-radius:30px; overflow:hidden; }
+.poster { width:100%; height:100%; object-fit:cover; min-height:600px; }
+.info { padding:3rem; }
+.info h1 { font-size:3.5rem; margin-bottom:1rem; }
+.original { font-size:1.6rem; color:#999; margin-bottom:2rem; }
+.rating-big { font-size:4.5rem; color:#ffd43b; margin:2rem 0; }
+.genres span { display:inline-block; background:#6e00ff33; color:#ff6bff; padding:0.6rem 1.2rem; border-radius:30px; margin-right:0.8rem; margin-bottom:0.8rem; }
+.desc { font-size:1.3rem; line-height:1.7; color:#ddd; margin-top:2rem; }
+
+@media (max-width:900px) { .detail { grid-template-columns:1fr; } }
+
+.anime-card,
+.anime-card h3,
+.anime-card .rating,
+.anime-card .year {
+  text-decoration: none !important;
+  color: inherit;
+}
+
+.anime-card:hover h3,
+.anime-card:hover .rating {
+  text-decoration: none;
+}
