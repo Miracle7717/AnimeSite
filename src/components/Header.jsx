@@ -36,9 +36,8 @@ export default function Header() {
           <Link to="/" onClick={() => setOpen(false)}>
             Главная
           </Link>
-          <a href="" target="_blank" rel="noopener noreferrer">
-          Закладки
-          </a>
+          <Link to="/basket" onClick={() => setOpen(false)}>
+            Корзина          </Link>
           <span className="coming-soon">Топ-100</span>
 
           <form className="search" onSubmit={onSubmit} role="search">

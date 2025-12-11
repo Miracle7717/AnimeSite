@@ -11,7 +11,7 @@ export default function Footer() {
           <h5>Ссылки</h5>
           <nav className="footer-links">
             <a href="/">Главная</a>
-            <a href="https://myanimelist.net" target="_blank" rel="noopener noreferrer">Закладки</a>
+            <a href="https://myanimelist.net" target="_blank" rel="noopener noreferrer">Карзина</a>
             <a href="#">Топ-100</a>
           </nav>
         </div>
