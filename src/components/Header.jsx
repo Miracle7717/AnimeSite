@@ -1,11 +1,13 @@
 import { Link, useNavigate, useLocation } from "react-router-dom";
 import { useState } from "react";
+import { useAuth } from "../AuthContext";
 
 export default function Header() {
   const [open, setOpen] = useState(false);
   const [query, setQuery] = useState("");
   const navigate = useNavigate();
   const location = useLocation();
+  const { user, logout } = useAuth();
 
   function onSubmit(e) {
     e.preventDefault();
@@ -39,6 +41,18 @@ export default function Header() {
           <Link to="/basket" onClick={() => setOpen(false)}>
             Корзина          </Link>
           <span className="coming-soon">Топ-100</span>
+
+          {user ? (
+            <>
+              <span>Привет, {user.name}!</span>
+              <Link to="/" onClick={() => { logout(); setOpen(false); }}>Выйти</Link>
+            </>
+          ) : (
+            <>
+              <Link to="/login" onClick={() => setOpen(false)}>Войти</Link>
+              <Link to="/register" onClick={() => setOpen(false)}>Регистрация</Link>
+            </>
+          )}
 
           <form className="search" onSubmit={onSubmit} role="search">
             <input
