@@ -40,19 +40,19 @@ export default function Header() {
           </Link>
           <Link to="/basket" onClick={() => setOpen(false)}>
             Корзина          </Link>
-          <span className="coming-soon">Топ-100</span>
+          <Link to="/about" onClick={() => setOpen(false)}>
+            О нас
+          </Link>
+          <Link to="/contacts" onClick={() => setOpen(false)}>
+            Контакты
+          </Link>
 
           {user ? (
             <>
               <span>Привет, {user.name}!</span>
               <Link to="/" onClick={() => { logout(); setOpen(false); }}>Выйти</Link>
             </>
-          ) : (
-            <>
-              <Link to="/login" onClick={() => setOpen(false)}>Войти</Link>
-              <Link to="/register" onClick={() => setOpen(false)}>Регистрация</Link>
-            </>
-          )}
+          ) : null}
 
           <form className="search" onSubmit={onSubmit} role="search">
             <input
