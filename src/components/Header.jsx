@@ -38,8 +38,8 @@ export default function Header() {
           <Link to="/" onClick={() => setOpen(false)}>
             Главная
           </Link>
-          <Link to="/basket" onClick={() => setOpen(false)}>
-            Корзина          </Link>
+          <Link to="/my-anime" onClick={() => setOpen(false)}>
+            Моя коллекция          </Link>
           <Link to="/about" onClick={() => setOpen(false)}>
             О нас
           </Link>

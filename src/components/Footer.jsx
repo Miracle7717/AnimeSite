@@ -11,7 +11,7 @@ export default function Footer() {
           <h5>Ссылки</h5>
           <nav className="footer-links">
             <a href="/">Главная</a>
-            <a href="/basket">Корзина</a>
+            <a href="/my-anime">Моя коллекция</a>
             <a href="/about">О нас</a>
             <a href="/contacts">Контакты</a>
           </nav>

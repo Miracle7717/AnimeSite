@@ -1,10 +1,10 @@
 import { Routes, Route } from "react-router-dom";
 import Home from "../pages/Home";
 import AnimeDetail from "../pages/AnimeDetail";
-import BasketList from "../pages/basket_list";
-import BasketDetail from "../pages/basket_detail";
-import CreateOrder from "../pages/create_order";
-import UpdateOrder from "../pages/update_order";
+import MyAnimeList from "../pages/my_anime_list";
+import MyAnimeDetail from "../pages/my_anime_detail";
+import AddAnime from "../pages/add_anime";
+import EditAnime from "../pages/edit_anime";
 import About from "../pages/About";
 import Contacts from "../pages/Contacts";
 import Header from "./Header";
@@ -25,11 +25,11 @@ function AppContent() {
         <Route path="/about" element={<ProtectedRoute><About /></ProtectedRoute>} />
         <Route path="/contacts" element={<ProtectedRoute><Contacts /></ProtectedRoute>} />
 
-        <Route path="/basket" element={<ProtectedRoute><BasketList /></ProtectedRoute>} />
-        <Route path="/basket/create" element={<ProtectedRoute><CreateOrder /></ProtectedRoute>} />
-        <Route path="/basket/:id" element={<ProtectedRoute><BasketDetail /></ProtectedRoute>} />
-        <Route path="/basket/:id/edit" element={<ProtectedRoute><UpdateOrder /></ProtectedRoute>} />
-
+        <Route path="/my-anime" element={<ProtectedRoute><MyAnimeList /></ProtectedRoute>} />
+        <Route path="/my-anime/add" element={<ProtectedRoute><AddAnime /></ProtectedRoute>} />
+        <Route path="/my-anime/:id" element={<ProtectedRoute><MyAnimeDetail /></ProtectedRoute>} />
+        <Route path="/my-anime/:id/edit" element={<ProtectedRoute><EditAnime /></ProtectedRoute>} />
+      
       </Routes>
 
       {user && <Footer />}
